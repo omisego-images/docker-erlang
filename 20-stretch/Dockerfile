@@ -6,7 +6,7 @@ ENV OTP_VERSION="20.3.2"
 RUN set -xe && \
     OTP_DOWNLOAD_URL="https://github.com/erlang/otp/archive/OTP-${OTP_VERSION}.tar.gz" && \
     OTP_DOWNLOAD_SHA256="9809be52baa23d6fd18ee70b9a9b7c548e44f586db2f46ff5bfe66719cfab10a" && \
-    build_deps="automake autoconf build-essential libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev" && \
+    build_deps="automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev" && \
     apt-get update && \
     apt-get install -y --no-install-recommends $build_deps && \
     curl -fsL -o otp-src.tar.gz "${OTP_DOWNLOAD_URL}" && \
